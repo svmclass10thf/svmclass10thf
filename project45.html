@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PROJECT 45 - LIVE CLASSES </title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #ff3b3b;
+      letter-spacing: 1px;
+      text-shadow: 0px 0px 8px #ff3b3b;
+    }
+
+    .subject-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .subject-box {
+      background: #1a1a1a;
+      border: 2px solid #ff3b3b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.4);
+      transition: 0.3s;
+    }
+
+    .subject-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 0px 16px rgba(255, 0, 0, 0.7);
+    }
+
+    .subject-title {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #ff3b3b;
+      text-align: center;
+      font-weight: 600;
+      text-shadow: 0px 0px 6px #ff3b3b;
+    }
+
+    .pdf-link {
+      display: block;
+      background: #ff3b3b;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 8px;
+      text-align: center;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .pdf-link:hover {
+      background: #ff0000;
+      transform: scale(1.03);
+    }
+
+    /* BACK TO HOME BUTTON */
+    .back-home {
+      display: block;
+      width: 200px;
+      margin: 40px auto 10px;
+      text-align: center;
+      background: #ff3b3b;
+      color: white;
+      text-decoration: none;
+      padding: 12px 0;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+      transition: 0.3s;
+    }
+
+    .back-home:hover {
+      background: #ff0000;
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(255, 0, 0, 0.8);
+    }
+
+    /* FOOTER SIGNATURE */
+    .footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 1.1rem;
+      color: #ff3b3b;
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px #ff3b3b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>PROJECT 45 <br> LIVE CLASSES </h1>
+
+  <div class="subject-container">
+
+    <div class="subject-box">
+      <div class="subject-title">1st LIVE</div>
+      <a href="#" class="pdf-link">Click To Join</a>
+    </div>
+
+    <div class="subject-box">
+      <div class="subject-title">2nd LIVE</div>
+      <a href="#" class="pdf-link">Click To Join</a>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="back-home">⬅ Back to Home</a>
+
+  <!-- FOOTER SIGNATURE -->
+  <div class="footer">@PRIYANSHU </div>
+
+</body>
+</html>
