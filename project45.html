@@ -24,10 +24,45 @@
     h1 {
       text-align: center;
       font-size: 2.2rem;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
       color: #ff3b3b;
       letter-spacing: 1px;
       text-shadow: 0px 0px 8px #ff3b3b;
+    }
+
+    /* Notice Box */
+    .notice-box {
+      background: #1a1a1a;
+      border-left: 4px solid #ff3b3b;
+      padding: 12px 15px;
+      margin: 0 auto 25px;
+      width: 95%;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .notice-box span {
+      color: #ff3b3b;
+      font-weight: 600;
+    }
+
+    /* Popup message */
+    .popup-message {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ff3b3b;
+      padding: 12px 20px;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+      display: none;
+      z-index: 999;
     }
 
     .subject-container {
@@ -125,35 +160,39 @@
 
   <h1>PROJECT 45 <br> LIVE CLASSES</h1>
 
+  <!-- Notice Box with Copy Function -->
+  <div class="notice-box" onclick="copySiteLink()">
+    If you face any problem in viewing the lectures in the app, please open this website in your phone's browser. (click on link to copy)
+    <span>https://svmclass10thf.github.io/svmclass10thf/</span>
+  </div>
+
   <div class="subject-container">
 
-    <!-- FIRST LIVE CARD -->
     <div class="subject-box">
       <div class="subject-title">1st LIVE</div>
       <div class="countdown" id="count1">Loading...</div>
-<a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJiSEJxYkhCbVNHSlpkVlZ4UldKVVowNVlPRzVPU1ZCck5IUk5UR2xoVTFobGRsTm1hR3M1TjFKUGF6MD0iLCJuYW1lIjoiVHJpZ29ub21ldHJ5JTIwMDElMjAlM0ElMjBUJTIwcmF0aW9zJTIwYW5kJTIwVCUyMHJhdGlvcyUyMGZvciUyMHNvbWUlMjBzcGVjaWZpYyUyMGFuZ2xlcyUyMCU3QyU3QyUyMERIQSUyMGFuZCUyMFF1aXolMjB3aWxsJTIwYmUlMjBwcm92aWRlZCUyMHNvb24iLCJpbWFnZSI6Imh0dHBzJTNBJTJGJTJGc3R1ZHlzdGFyay5pbiUyRnRlbXBvcmFyeS1zaGlmdGVkJTJGaW1hZ2VzJTJGbGl2ZS1wb3N0ZXIucG5nIn0.qdnyyUEAslQVwUBeatEGevX2fY1qQbGdk16NQdJPIDA" class="pdf-link">Click To Join</a>
+    <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJiSEJxYkhCbVNHSlpkVlZ4UldKVVowNVlPRzVPU1ZCck5IUk5UR2xoVTFobGRsTm1hR3M1TjFKUGF6MD0iLCJuYW1lIjoiVHJpZ29ub21ldHJ5JTIwMDElMjAlM0ElMjBUJTIwcmF0aW9zJTIwYW5kJTIwVCUyMHJhdGlvcyUyMGZvciUyMHNvbWUlMjBzcGVjaWZpYyUyMGFuZ2xlcyUyMCU3QyU3QyUyMERIQSUyMGFuZCUyMFF1aXolMjB3aWxsJTIwYmUlMjBwcm92aWRlZCUyMHNvb24iLCJpbWFnZSI6Imh0dHBzJTNBJTJGJTJGc3R1ZHlzdGFyay5pbiUyRnRlbXBvcmFyeS1zaGlmdGVkJTJGaW1hZ2VzJTJGbGl2ZS1wb3N0ZXIucG5nIn0.qdnyyUEAslQVwUBeatEGevX2fY1qQbGdk16NQdJPIDA" class="pdf-link">Click To Join</a>
     </div>
 
-    <!-- SECOND LIVE CARD -->
     <div class="subject-box">
       <div class="subject-title">2nd LIVE</div>
       <div class="countdown" id="count2">Loading...</div>
-
       <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJTMEpWV1RCcGNrTnVRbVF4V0Vod1UzTlNObVUxVVRsM2JsZGlUVVpEZGxGVGRIUTVOalo2YlRGa1NUMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHklMjAwNCUyMCUzQSUyMEhlYXRpbmclMjBFZmZlY3RzJTIwJTI2JTIwUG93ZXIlMjAlN0MlN0MlMjBESEElMjBhbmQlMjBRdWl6JTIwd2lsbCUyMGJlJTIwcHJvdmlkZWQlMjBzb29uIiwiaW1hZ2UiOiJodHRwcyUzQSUyRiUyRnN0dWR5c3RhcmsuaW4lMkZ0ZW1wb3Jhcnktc2hpZnRlZCUyRmltYWdlcyUyRmxpdmUtcG9zdGVyLnBuZyJ9.IQu5BTI96CBlr1bVFCTvpc3nxVVm3J08OTDufmwCa_k" class="pdf-link">Click To Join</a>
     </div>
-    <!-- THIRD CARD -->
+
     <div class="subject-box">
       <div class="subject-title">ABHAY BATCH</div>
-      <a href="https://temproray.studystark.in/#batch_details/67be1ea9e92878bc16923fe8" class="pdf-link">Click To Access Batch</a>
+     <a href="https://temproray.studystark.in/#batch_details/67be1ea9e92878bc16923fe8" class="pdf-link">Click To Access Batch</a>
     </div>
 
   </div>
 
   <a href="index.html" class="back-home">⬅ Back to Home</a>
 
-  <div class="footer">@PRIYANSHU </div>
+  <div class="footer">@PRIYANSHU</div>
 
   <script>
+    // Countdown function
     function startCountdown(targetTime, elementId) {
       setInterval(function () {
         let now = new Date();
@@ -178,12 +217,28 @@
       }, 1000);
     }
 
-    // 5 PM countdown
     startCountdown("17:00", "count1");
-
-    // 7 PM countdown
     startCountdown("19:00", "count2");
+
+    // Copy link + popup 
+    function copySiteLink() {
+      const link = "https://svmclass10thf.github.io/svmclass10thf/";
+      navigator.clipboard.writeText(link).then(() => {
+
+        let popup = document.createElement("div");
+        popup.className = "popup-message";
+        popup.innerText = "Link copied!! Paste it in any browser";
+
+        document.body.appendChild(popup);
+        popup.style.display = "block";
+
+        setTimeout(() => {
+          popup.style.display = "none";
+          popup.remove();
+        }, 2000);
+      });
+    }
   </script>
 
 </body>
-      </html>
+</html>
