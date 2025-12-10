@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PROJECT 45 - BIOLOGY</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #ff3b3b;
+      letter-spacing: 1px;
+      text-shadow: 0px 0px 8px #ff3b3b;
+    }
+
+    /* Chapter box */
+    .chapter-box {
+      background: #1a1a1a;
+      border: 2px solid #ff3b3b;
+      padding: 18px;
+      margin: 18px auto;
+      width: 95%;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .chapter-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 16px rgba(255, 0, 0, 0.7);
+    }
+
+    .chapter-title {
+      font-size: 1.4rem;
+      color: #ff3b3b;
+      font-weight: 600;
+      text-shadow: 0px 0px 6px #ff3b3b;
+      margin-bottom: 5px;
+    }
+
+    .lectures {
+      margin-top: 12px;
+      display: none;
+      animation: fade 0.4s;
+    }
+
+    @keyframes fade {
+      from {opacity: 0; transform: translateY(-6px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* UPDATED LECTURE BUTTON DESIGN */
+    .lec-btn {
+      display: block;
+      width: 92%;
+      margin: 10px auto;
+      padding: 12px;
+      background: linear-gradient(90deg, #ff1a1a, #b30000);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 14px;
+      text-decoration: none;
+      border: 2px solid #ff3b3b;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.45);
+      transition: 0.23s ease-in-out;
+    }
+
+    .lec-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #ff0000, #800000);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.75);
+    }
+
+    /* Back button */
+    .back-home {
+      display: block;
+      width: 200px;
+      margin: 25px auto 10px;
+      text-align: center;
+      background: #ff3b3b;
+      color: white;
+      text-decoration: none;
+      padding: 12px 0;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+      transition: 0.3s;
+    }
+
+    .back-home:hover {
+      background: #ff0000;
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(255, 0, 0, 0.8);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #ff3b3b;
+      text-shadow: 0 0 8px #ff3b3b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>PROJECT 45 <br> BIOLOGY</h1>
+
+<!-- TRIANGLE -->
+<div class="chapter-box" onclick="toggleLectures('triangle')">
+  <div class="chapter-title">🌱 Life Process</div>
+  <div id="triangle" class="lectures">
+    <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJVRFJOYzFSSFlrVm1USEF6TkZCd1RGQnNRVTFCVTFwb1pWazBNRGhzZEVKWlRFWlhjRXhIWjI5V2R6MD0iLCJuYW1lIjoiTGlmZSBQcm9jZXNzZXMgMDEgOiBOdXRyaXRpb24iLCJpbWFnZSI6Imh0dHBzOlwvXC9zdGF0aWMucHcubGl2ZVwvNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5XC9BRE1JTlwvNjE0OGQ4ZjYtMWMwNC00MWY4LWI5YjctMDhkMjZjN2U1MjU5LnBuZyJ9.JwuqrldTUG667IyaWDi-gyIhzx-pFidwl23aaY_rmtM&loaded=1">Lecture 1</a>
+    <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJhM1JDYlhSa1ZVeDRWR1JLWW5KeGMweFBaVzQzYkRFd01XMU9PVzF1UmtoQ2MwNUVUVVZJVTJoTmJ6MD0iLCJuYW1lIjoiTGlmZSBQcm9jZXNzZXMgMDIgOiBSZXNwaXJhdGlvbiB8fCBOTyBESEEiLCJpbWFnZSI6Imh0dHBzOlwvXC9zdGF0aWMucHcubGl2ZVwvNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5XC9BRE1JTlwvNWFkNWEzNWEtMzllYi00MmEzLThhYWItZGJkM2M4OTNlNmI3LnBuZyJ9.f2EQEk2EcaHVR1PXJEfa7CjEwfnLwr6aULLVJwY1IvI&loaded=1">Lecture 2</a>
+    <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJOMVJ6TTBGNFEzUXZZamhVYlRoTlNYQkxPVUl6Y0daSldsQmliemxSYTBOalNrYzFXbnBsVVU5aFJUMD0iLCJuYW1lIjoiTGlmZSBQcm9jZXNzZXMgMDMgOiBUcmFuc3BvcnRhdGlvbiIsImltYWdlIjoiaHR0cHM6XC9cL3N0YXRpYy5wdy5saXZlXC81ZWIzOTNlZTk1ZmFiNzQ2OGE3OWQxODlcL0FETUlOXC9hY2JjZDQxYi1iYmE2LTQ2NjUtODc5Yi0wNjVkNDRmYWNjODQucG5nIn0.Mo7OgrtcZt40mSXnddkmBZea7OZjmruigrc5yrQ7m9c&loaded=1">Lecture 3</a>
+    <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJVbEJYTmpsdWRWUlBOWFZRTW10cmNGcDZTbmQ2TkU5c05WSkJaWEZEVG05TFMzQm9NeTl3Ynk5eFdUMD0iLCJuYW1lIjoiTGlmZSBQcm9jZXNzZXMgMDQgOiBFeGNyZXRpb24gfHwgTk8gREhBIHx8IFJlc2NoZWR1bGVkIEAwNzowNSBQTSIsImltYWdlIjoiaHR0cHM6XC9cL3N0YXRpYy5wdy5saXZlXC81ZWIzOTNlZTk1ZmFiNzQ2OGE3OWQxODlcL0FETUlOXC8zYTVhYzNlMC1jMzEyLTQ5YTUtYjNlMi1iMjQxYzE5YjAxMmUucG5nIn0.V6eZEUnc_q-Tl7MdfLR1VU5zWwrH_OelP931n4e194o&loaded=1">Lecture 4</a>
+  </div>
+</div>
+
+
+<a href="subjects.html" class="back-home">⬅ Back to Subjects</a>
+
+<div class="footer">@PRIYANSHU</div>
+
+<script>
+  function toggleLectures(id) {
+    let box = document.getElementById(id);
+    box.style.display = (box.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
