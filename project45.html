@@ -48,23 +48,37 @@
       font-weight: 600;
     }
 
-    /* Popup message */
-    .popup-message {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #ff3b3b;
-      padding: 12px 20px;
-      color: white;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1rem;
-      box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
-      display: none;
-      z-index: 999;
+    /* =======================
+       POPUP WITH ANIMATION
+       ======================= */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+      100% { opacity: 1; transform: translateX(-50%) translateY(0); }
     }
 
+    @keyframes fadeOut {
+      0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+      100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    }
+
+    .popup-message {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #4dff88;
+      padding: 12px 20px;
+      color: #000;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 0 14px rgba(0, 255, 100, 0.7);
+      z-index: 9999;
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    /* Subject box etc - same as before */
     .subject-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -152,6 +166,7 @@
       text-shadow: 0 0 8px #ff3b3b;
       font-weight: 600;
     }
+
   </style>
 
 </head>
@@ -171,13 +186,13 @@
     <div class="subject-box">
       <div class="subject-title">1st LIVE</div>
       <div class="countdown" id="count1">Loading...</div>
-      <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJiSEJxYkhCbVNHSlpkVlZ4UldKVVowNVlPRzVPU1ZCck5IUk5UR2xoVTFobGRsTm1hR3M1TjFKUGF6MD0iLCJuYW1lIjoiVHJpZ29ub21ldHJ5JTIwMDElMjAlM0ElMjBUJTIwcmF0aW9zJTIwYW5kJTIwVCUyMHJhdGlvcyUyMGZvciUyMHNvbWUlMjBzcGVjaWZpYyUyMGFuZ2xlcyUyMCU3QyU3QyUyMERIQSUyMGFuZCUyMFF1aXolMjB3aWxsJTIwYmUlMjBwcm92aWRlZCUyMHNvb24iLCJpbWFnZSI6Imh0dHBzJTNBJTJGJTJGc3R1ZHlzdGFyay5pbiUyRnRlbXBvcmFyeS1zaGlmdGVkJTJGaW1hZ2VzJTJGbGl2ZS1wb3N0ZXIucG5nIn0.qdnyyUEAslQVwUBeatEGevX2fY1qQbGdk16NQdJPIDA" class="pdf-link">Click To Join</a>
+         <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJiSEJxYkhCbVNHSlpkVlZ4UldKVVowNVlPRzVPU1ZCck5IUk5UR2xoVTFobGRsTm1hR3M1TjFKUGF6MD0iLCJuYW1lIjoiVHJpZ29ub21ldHJ5JTIwMDElMjAlM0ElMjBUJTIwcmF0aW9zJTIwYW5kJTIwVCUyMHJhdGlvcyUyMGZvciUyMHNvbWUlMjBzcGVjaWZpYyUyMGFuZ2xlcyUyMCU3QyU3QyUyMERIQSUyMGFuZCUyMFF1aXolMjB3aWxsJTIwYmUlMjBwcm92aWRlZCUyMHNvb24iLCJpbWFnZSI6Imh0dHBzJTNBJTJGJTJGc3R1ZHlzdGFyay5pbiUyRnRlbXBvcmFyeS1zaGlmdGVkJTJGaW1hZ2VzJTJGbGl2ZS1wb3N0ZXIucG5nIn0.qdnyyUEAslQVwUBeatEGevX2fY1qQbGdk16NQdJPIDA" class="pdf-link">Click To Join</a>
     </div>
 
     <div class="subject-box">
       <div class="subject-title">2nd LIVE</div>
       <div class="countdown" id="count2">Loading...</div>
-        <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJTMEpWV1RCcGNrTnVRbVF4V0Vod1UzTlNObVUxVVRsM2JsZGlUVVpEZGxGVGRIUTVOalo2YlRGa1NUMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHklMjAwNCUyMCUzQSUyMEhlYXRpbmclMjBFZmZlY3RzJTIwJTI2JTIwUG93ZXIlMjAlN0MlN0MlMjBESEElMjBhbmQlMjBRdWl6JTIwd2lsbCUyMGJlJTIwcHJvdmlkZWQlMjBzb29uIiwiaW1hZ2UiOiJodHRwcyUzQSUyRiUyRnN0dWR5c3RhcmsuaW4lMkZ0ZW1wb3Jhcnktc2hpZnRlZCUyRmltYWdlcyUyRmxpdmUtcG9zdGVyLnBuZyJ9.IQu5BTI96CBlr1bVFCTvpc3nxVVm3J08OTDufmwCa_k" class="pdf-link">Click To Join</a>
+       <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJTMEpWV1RCcGNrTnVRbVF4V0Vod1UzTlNObVUxVVRsM2JsZGlUVVpEZGxGVGRIUTVOalo2YlRGa1NUMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHklMjAwNCUyMCUzQSUyMEhlYXRpbmclMjBFZmZlY3RzJTIwJTI2JTIwUG93ZXIlMjAlN0MlN0MlMjBESEElMjBhbmQlMjBRdWl6JTIwd2lsbCUyMGJlJTIwcHJvdmlkZWQlMjBzb29uIiwiaW1hZ2UiOiJodHRwcyUzQSUyRiUyRnN0dWR5c3RhcmsuaW4lMkZ0ZW1wb3Jhcnktc2hpZnRlZCUyRmltYWdlcyUyRmxpdmUtcG9zdGVyLnBuZyJ9.IQu5BTI96CBlr1bVFCTvpc3nxVVm3J08OTDufmwCa_k" class="pdf-link">Click To Join</a>
     </div>
 
     <div class="subject-box">
@@ -231,7 +246,9 @@
     startCountdown("17:00", "count1");
     startCountdown("19:00", "count2");
 
-    // Copy link + popup 
+    /* ==================
+       Copy Link + Popup
+       ================== */
     function copySiteLink() {
       const link = "https://svmclass10thf.github.io/svmclass10thf/";
       navigator.clipboard.writeText(link).then(() => {
@@ -244,7 +261,10 @@
         popup.style.display = "block";
 
         setTimeout(() => {
-          popup.style.display = "none";
+          popup.style.animation = "fadeOut 0.4s ease forwards";
+        }, 1600);
+
+        setTimeout(() => {
           popup.remove();
         }, 2000);
       });
