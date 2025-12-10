@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PROJECT 45 - PHYSICS</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #ff3b3b;
+      letter-spacing: 1px;
+      text-shadow: 0px 0px 8px #ff3b3b;
+    }
+
+    /* Chapter box */
+    .chapter-box {
+      background: #1a1a1a;
+      border: 2px solid #ff3b3b;
+      padding: 18px;
+      margin: 18px auto;
+      width: 95%;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .chapter-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 16px rgba(255, 0, 0, 0.7);
+    }
+
+    .chapter-title {
+      font-size: 1.4rem;
+      color: #ff3b3b;
+      font-weight: 600;
+      text-shadow: 0px 0px 6px #ff3b3b;
+      margin-bottom: 5px;
+    }
+
+    .lectures {
+      margin-top: 12px;
+      display: none;
+      animation: fade 0.4s;
+    }
+
+    @keyframes fade {
+      from {opacity: 0; transform: translateY(-6px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* UPDATED LECTURE BUTTON DESIGN */
+    .lec-btn {
+      display: block;
+      width: 92%;
+      margin: 10px auto;
+      padding: 12px;
+      background: linear-gradient(90deg, #ff1a1a, #b30000);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 14px;
+      text-decoration: none;
+      border: 2px solid #ff3b3b;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.45);
+      transition: 0.23s ease-in-out;
+    }
+
+    .lec-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #ff0000, #800000);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.75);
+    }
+
+    /* Back button */
+    .back-home {
+      display: block;
+      width: 200px;
+      margin: 25px auto 10px;
+      text-align: center;
+      background: #ff3b3b;
+      color: white;
+      text-decoration: none;
+      padding: 12px 0;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+      transition: 0.3s;
+    }
+
+    .back-home:hover {
+      background: #ff0000;
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(255, 0, 0, 0.8);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #ff3b3b;
+      text-shadow: 0 0 8px #ff3b3b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>PROJECT 45 <br> PHYSICS</h1>
+
+<!-- TRIANGLE -->
+<div class="chapter-box" onclick="toggleLectures('triangle')">
+  <div class="chapter-title">⚡ Electricity</div>
+  <div id="triangle" class="lectures">
+    <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJibmhNYUZWRU9FVllja0pRTW5KUGRVNVdZaXM1THpsbVpURnFMelozVG1NeE56RXdWM2w1TlZCcVFUMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHkgMDEgOiBDaGFyZ2UgYW5kIEN1cnJlbnQiLCJpbWFnZSI6Imh0dHBzOlwvXC9zdGF0aWMucHcubGl2ZVwvNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5XC9BRE1JTlwvOWU1NjM4MWMtMjBjNC00NDRiLTk0YjYtMzA3MGEyNjVkNTlhLnBuZyJ9.29ItRwHDjawemSK1qphwFBDiOyFuX506x-VyAcCuRZo&loaded=1">Lecture 1</a>
+    <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJUR1ZJSzAwek1pdGhiM3BaVUdaaVpVSnBka1Z4Y0Zka1VETkZOa1ZZYkhJNUsySkZUVGd5T1hsWFJUMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHkgMDIgOiBWb2x0YWdlIHx8IEVsZWN0cmljIENpcmN1aXQgfHwgT2htJ3MgTGF3IHx8IERIQSBhbmQgUXVpeiB3aWxsIHByb3ZpZGVkIHNvb24iLCJpbWFnZSI6Imh0dHBzOlwvXC9zdGF0aWMucHcubGl2ZVwvNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5XC9BRE1JTlwvOGFjYmQ1ODAtMjQ3My00MGIyLTg2MTctZDA0YzU3ODZkMjE5LnBuZyJ9.IYsSPm41e0DjOnmjYasUR87YtBqhsDmsDlUzQ_hhdwg&loaded=1">Lecture 2</a>
+    <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJWMEZVV1RaVmNIUmpZeTl3Y21aMldXOUtOakZGYlZKbldrNHlaRm92UkV0VVFWRnNjRlU1ZWpWaE9EMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHkgMDMgOiBSZXNpc3RhbmNlIHx8IENvbWJpbmF0aW9uIHx8IE5PIERIQSB8fCBSZXNjaGVkdWxlZCBAMDc6MTUgUE0iLCJpbWFnZSI6Imh0dHBzOlwvXC9zdGF0aWMucHcubGl2ZVwvNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5XC9BRE1JTlwvODkxNDc4OWYtMWJhOC00ZTBmLWE4YzctNDc3OWZjZTk2YjBkLnBuZyJ9.pqm_JUrYMsiTYtlyAgtURQwjUcDXWboQdBF6UPKBNds&loaded=1">Lecture 3</a>
+    <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJTMEpWV1RCcGNrTnVRbVF4V0Vod1UzTlNObVUxVVRsM2JsZGlUVVpEZGxGVGRIUTVOalo2YlRGa1NUMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHkgMDQgOiBIZWF0aW5nIEVmZmVjdHMgJiBQb3dlciIsImltYWdlIjoiaHR0cHM6XC9cL3N0YXRpYy5wdy5saXZlXC81ZWIzOTNlZTk1ZmFiNzQ2OGE3OWQxODlcL0FETUlOXC8yMjdjMTllMS1lYmY1LTRmYjMtYWJmNS02N2YwYTZlYjNmMTUucG5nIn0.q7--bu8d5-a9S44KnazMaple00QK5HdUWeAkegcWuXE&loaded=1">Lecture 4</a>
+  </div>
+</div>
+
+
+<a href="subjects.html" class="back-home">⬅ Back to Subjects</a>
+
+<div class="footer">@PRIYANSHU</div>
+
+<script>
+  function toggleLectures(id) {
+    let box = document.getElementById(id);
+    box.style.display = (box.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
