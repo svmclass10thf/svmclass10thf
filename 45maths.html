@@ -39,7 +39,6 @@
       width: 95%;
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
-      cursor: pointer;
       transition: 0.3s;
     }
 
@@ -54,6 +53,7 @@
       font-weight: 600;
       text-shadow: 0px 0px 6px #ff3b3b;
       margin-bottom: 5px;
+      cursor: pointer;
     }
 
     .lectures {
@@ -67,7 +67,7 @@
       to {opacity: 1; transform: translateY(0);}
     }
 
-    /* UPDATED LECTURE BUTTON DESIGN */
+    /* Lecture buttons */
     .lec-btn {
       display: block;
       width: 92%;
@@ -129,9 +129,10 @@
 <h1>PROJECT 45 <br> MATHEMATICS</h1>
 
 <!-- TRIANGLE -->
-<div class="chapter-box" onclick="toggleLectures('triangle')">
-  <div class="chapter-title">📐 Triangle</div>
-  <div id="triangle" class="lectures">
+<div class="chapter-box">
+  <div class="chapter-title" onclick="toggleLectures('triangle')">📐 Triangle</div>
+
+ <div id="triangle" class="lectures">
     <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJhM2hrVjJkblEwRkVPVU41WlVadVkxSkVaamhxTXpFdlFteG1VVWRtYjBsbVpFWmpjRGRzUVN0cVZUMD0iLCJuYW1lIjoiVHJpYW5nbGVzIDAxIDogQmFzaWMgUHJvcG9ydGlvbmFsaXR5IFRoZW9yZW0gfHwgTk8gREhBIiwiaW1hZ2UiOiJodHRwczpcL1wvc3RhdGljLnB3LmxpdmVcLzVlYjM5M2VlOTVmYWI3NDY4YTc5ZDE4OVwvQURNSU5cL2Q0OTUzMjljLWJjOTktNDBkZC1hMjQ0LWZlNTMzNDFlNzExYy5wbmcifQ.KUv-Zcz2_Pn3MObdLBIZ2P930Qa14RxbdnW2_lw8Efc&loaded=1">Lecture 1</a>
     <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJhbVp4TVc5T1VWbFJPSEptZDBwaU4wZ3hRbmRUYkc1dFltUjRSR1pIVDNoUFRHTkJWbFJhTDBaWVFUMD0iLCJuYW1lIjoiVHJpYW5nbGVzIDAyIDogU2ltaWxhcml0eSBvZiBUcmlhbmdsZXMiLCJpbWFnZSI6Imh0dHBzOlwvXC9zdGF0aWMucHcubGl2ZVwvNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5XC9BRE1JTlwvZTcwNjA2NDgtZGIzZC00ZjRlLWJhYjQtNWUzNmRjOThjZWEwLnBuZyJ9.R_omATujPPxqVAyUZ_aNPEg8AnINICf5ZD9wTqYgpXs&loaded=1">Lecture 2</a>
     <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJaU3RPTTA1clEyOUpZblJNV2xGT1ltbHZTSGcyTm14aGVFdEJTWEZMUjNOSlJtVkhXazFGTnpGMk9EMD0iLCJuYW1lIjoiVHJpYW5nbGVzIDAzIDogUXVlc3Rpb25zIiwiaW1hZ2UiOiJodHRwczpcL1wvc3RhdGljLnB3LmxpdmVcLzVlYjM5M2VlOTVmYWI3NDY4YTc5ZDE4OVwvQURNSU5cLzY4NmE5Njg5LTMzYmEtNDJlZC05MDkzLTJhZWFmNjJkMTc0NC5wbmcifQ.zkG46TbFMngJr-eCjLLLgjaKHf73uHmb5BmyhmWI1RI&loaded=1">Lecture 3</a>
@@ -139,9 +140,10 @@
 </div>
 
 <!-- TRIGONOMETRY -->
-<div class="chapter-box" onclick="toggleLectures('trigo')">
-  <div class="chapter-title">📏 Trigonometry</div>
-  <div id="trigo" class="lectures">
+<div class="chapter-box">
+  <div class="chapter-title" onclick="toggleLectures('trigo')">📏 Trigonometry</div>
+
+    <div id="trigo" class="lectures">
     <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJiSEJxYkhCbVNHSlpkVlZ4UldKVVowNVlPRzVPU1ZCck5IUk5UR2xoVTFobGRsTm1hR3M1TjFKUGF6MD0iLCJuYW1lIjoiVHJpZ29ub21ldHJ5IDAxIDogVCByYXRpb3MgYW5kIFQgcmF0aW9zIGZvciBzb21lIHNwZWNpZmljIGFuZ2xlcyIsImltYWdlIjoiaHR0cHM6XC9cL3N0YXRpYy5wdy5saXZlXC81ZWIzOTNlZTk1ZmFiNzQ2OGE3OWQxODlcL0FETUlOXC9kNGY4OTZkZi0zZjFjLTQ3Y2EtYWYzYy0zYWRlZWU3NDE0NDEucG5nIn0.8Ugd6EoZ_c8DnkaId51FVOtVjRsTRRAoS0xh2rCe4M0&loaded=1">Lecture 1</a>
     <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJXakZRTlRWTlZIUTFZbnBDYVNzd2VsaFBRMGxGTmt4eFJVVlBNRVpRTlhwd09FbGtNbXBuVjJKSFFUMD0iLCJuYW1lIjoiVHJpZ29ub21ldHJ5IDAyIDogVHJpZ29ub21ldHJpYyBJZGVudGl0aWVzIiwiaW1hZ2UiOiJodHRwczpcL1wvc3RhdGljLnB3LmxpdmVcLzVlYjM5M2VlOTVmYWI3NDY4YTc5ZDE4OVwvQURNSU5cLzlhMWRlY2I1LTExMjktNGZmYS1hNDA5LWZhNjY0ZDQ4MGIxYS5wbmcifQ.yzBQ_bvpuQsr651zIIT9I_SDhYTc0Ml3inKlZ8jEbHw&loaded=1">Lecture 2</a>
   </div>
@@ -153,8 +155,8 @@
 
 <script>
   function toggleLectures(id) {
-    let box = document.getElementById(id);
-    box.style.display = (box.style.display === "block") ? "none" : "block";
+    let x = document.getElementById(id);
+    x.style.display = (x.style.display === "block") ? "none" : "block";
   }
 </script>
 
