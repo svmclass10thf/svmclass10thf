@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PROJECT 45 - SST</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #ff3b3b;
+      letter-spacing: 1px;
+      text-shadow: 0px 0px 8px #ff3b3b;
+    }
+
+    /* Main subject box */
+    .subject-box {
+      background: #1a1a1a;
+      border: 2px solid #ff3b3b;
+      padding: 18px;
+      margin: 18px auto;
+      width: 95%;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .subject-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 16px rgba(255, 0, 0, 0.7);
+    }
+
+    .subject-title {
+      font-size: 1.5rem;
+      color: #ff3b3b;
+      font-weight: 600;
+      text-shadow: 0px 0px 6px #ff3b3b;
+      margin-bottom: 8px;
+    }
+
+    .chapters, .lectures {
+      margin-top: 12px;
+      display: none;
+      animation: fade 0.4s;
+    }
+
+    @keyframes fade {
+      from {opacity: 0; transform: translateY(-6px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .chapter-btn {
+      display: block;
+      width: 92%;
+      margin: 10px auto;
+      padding: 10px;
+      background: #262626;
+      border: 2px solid #ff3b3b;
+      color: #ff3b3b;
+      font-size: 1.1rem;
+      text-align: center;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+
+    .chapter-btn:hover {
+      transform: scale(1.05);
+      background: #330000;
+    }
+
+    .lec-btn {
+      display: block;
+      width: 92%;
+      margin: 10px auto;
+      padding: 12px;
+      background: linear-gradient(90deg, #ff1a1a, #b30000);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 14px;
+      text-decoration: none;
+      border: 2px solid #ff3b3b;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.45);
+      transition: 0.23s ease-in-out;
+    }
+
+    .lec-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #ff0000, #800000);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.75);
+    }
+
+    .back-home {
+      display: block;
+      width: 200px;
+      margin: 25px auto 10px;
+      text-align: center;
+      background: #ff3b3b;
+      color: white;
+      text-decoration: none;
+      padding: 12px 0;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+      transition: 0.3s;
+    }
+
+    .back-home:hover {
+      background: #ff0000;
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(255, 0, 0, 0.8);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #ff3b3b;
+      text-shadow: 0 0 8px #ff3b3b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>PROJECT 45 <br> SST</h1>
+
+<!-- SUBJECTS -->
+<div class="subject-box" onclick="toggleSection('history')">
+  <div class="subject-title">📘 History</div>
+  <div id="history" class="chapters">
+    <div class="chapter-btn" onclick="toggleChapter(event,'his-ch1')">Rise Of Nationalism In Europe</div>
+    <div id="his-ch1" class="lectures">
+      <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJjVlp2Y1U5NlVHVkJVbWhyYVV4dlRITk1XbWszVUV0U2F6SnVLMEZsZVhoMlEyZHNSbEJ3Y25aWlJUMD0iLCJuYW1lIjoiVGhlIFJpc2UgT2YgTmF0aW9uYWxpc20gSW4gRXVyb3BlIDogT25lIFNob3QiLCJpbWFnZSI6Imh0dHBzOlwvXC9zdGF0aWMucHcubGl2ZVwvNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5XC9BRE1JTlwvZjE5YmE5OGYtYzMzNi00Mzc5LWI1N2QtNzExMjMyMzUxZjg2LnBuZyJ9.otnyAr4dcdeYAbVVV8uq30FiWoI6B5wenBclpL54yo8&loaded=1" onclick="event.stopPropagation()">Lecture 1</a>
+    </div>
+
+    <div class="chapter-btn" onclick="toggleChapter(event,'his-ch2')">Chapter 2</div>
+    <div id="his-ch2" class="lectures">
+      <a class="lec-btn" href="#" onclick="event.stopPropagation()">No Lecture</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="subject-box" onclick="toggleSection('civics')">
+  <div class="subject-title">📗 Civics</div>
+  <div id="civics" class="chapters">
+    <div class="chapter-btn" onclick="toggleChapter(event,'civ-ch1')">Power Sharing</div>
+    <div id="civ-ch1" class="lectures">
+      <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJNMWRhZEhSaWFHbzJjMWh6TkVOUU1sRlVTa0Y0YUUxcmMyUnJZMGh3UnpFMlpGQlBaVXBtTTNNemJ6MD0iLCJuYW1lIjoiUG93ZXItU2hhcmluZyA6IE9uZSBTaG90IiwiaW1hZ2UiOiJodHRwczpcL1wvc3RhdGljLnB3LmxpdmVcLzVlYjM5M2VlOTVmYWI3NDY4YTc5ZDE4OVwvQURNSU5cLzk3NDQ3Y2U4LTJiNjctNGI1NS04MjYwLTJjZjM3N2Q3NTEyNC5wbmcifQ.jpTpuPpaoH3jNy9_sk1mOWaOXYGtelUSgsvhVh8iK4I&loaded=1" onclick="event.stopPropagation()">Lecture 1</a>
+    </div>
+  </div>
+</div>
+
+<div class="subject-box" onclick="toggleSection('geo')">
+  <div class="subject-title">🌍 Geography</div>
+  <div id="geo" class="chapters">
+    <div class="chapter-btn" onclick="toggleChapter(event,'geo-ch1')">Resource and Development</div>
+    <div id="geo-ch1" class="lectures">
+      <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJSR3cyTW5WcmIzcHFhakpIV1VJd1YyMUtlRXhRU0dKc2VURk5jVEJNVkZsTU5rSnVWeTl6WjBGaFZUMD0iLCJuYW1lIjoiR2VvZ3JhcGh5IDAxIDogUmVzb3VyY2VzIGFuZCBEZXZlbG9wbWVudCIsImltYWdlIjoiaHR0cHM6XC9cL3N0YXRpYy5wdy5saXZlXC81ZWIzOTNlZTk1ZmFiNzQ2OGE3OWQxODlcL0FETUlOXC8xMzViZDI3OC1iOWYxLTQwZWQtYTAxYy1hYTRhM2JiODcyNTkucG5nIn0.f6D-OSneeKzCKGIA4kPYBn1ZBRKMVh_G_2GtIwAJpu4&loaded=1" onclick="event.stopPropagation()">Lecture 1</a>
+    </div>
+  </div>
+</div>
+
+<div class="subject-box" onclick="toggleSection('eco')">
+  <div class="subject-title">💰 Economics</div>
+  <div id="eco" class="chapters">
+    <div class="chapter-btn" onclick="toggleChapter(event,'eco-ch1')">Chapter 1</div>
+    <div id="eco-ch1" class="lectures">
+      <a class="lec-btn" href="#" onclick="event.stopPropagation()">No Lecture</a>
+    </div>
+  </div>
+</div>
+
+<a href="recorded.html" class="back-home">⬅ Back to Subjects</a>
+
+<div class="footer">@PRIYANSHU</div>
+
+<script>
+  function toggleSection(id) {
+    let sec = document.getElementById(id);
+    sec.style.display = (sec.style.display === "block") ? "none" : "block";
+  }
+
+  function toggleChapter(event, id) {
+    event.stopPropagation();
+    let chap = document.getElementById(id);
+    chap.style.display = (chap.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
