@@ -30,7 +30,6 @@
       text-shadow: 0px 0px 8px #ff3b3b;
     }
 
-    /* Notice Box */
     .notice-box {
       background: #1a1a1a;
       border-left: 4px solid #ff3b3b;
@@ -48,9 +47,32 @@
       font-weight: 600;
     }
 
-    /* =======================
-       POPUP WITH ANIMATION
-       ======================= */
+    .whatsapp-box {
+      width: 95%;
+      margin: 25px auto;
+      padding: 12px;
+      background: #1a1a1a;
+      border-left: 4px solid #25D366;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(37, 211, 102, 0.5);
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .whatsapp-box a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #25D366;
+      text-shadow: 0 0 10px #25D366, 0 0 20px #25D366;
+      animation: glowText 1.2s infinite alternate;
+    }
+
+    @keyframes glowText {
+      0% { text-shadow: 0 0 6px #25D366; }
+      100% { text-shadow: 0 0 14px #25D366; }
+    }
+
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
       100% { opacity: 1; transform: translateX(-50%) translateY(0); }
@@ -78,7 +100,6 @@
       animation: fadeIn 0.4s ease forwards;
     }
 
-    /* Subject box etc - same as before */
     .subject-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -166,110 +187,131 @@
       text-shadow: 0 0 8px #ff3b3b;
       font-weight: 600;
     }
-
   </style>
-
 </head>
 
 <body>
 
-  <h1>PROJECT 45 <br> LIVE CLASSES</h1>
+<h1>PROJECT 45 <br> LIVE CLASSES</h1>
 
-  <!-- Notice Box with Copy Function -->
-  <div class="notice-box" onclick="copySiteLink()">
-    If you face any problem in viewing the lectures in the app, please open this website in your phone's browser. (click on link to copy)
-    <span>https://svmclass10thf.github.io/svmclass10thf/</span>
-  </div>
+<div class="notice-box" onclick="copySiteLink()">
+  If you face any problem in viewing the lectures in the app, please open this website in your phone's browser.
+  (click on link to copy)
+  <span>https://svmclass10thf.github.io/svmclass10thf/</span>
+</div>
 
-  <div class="subject-container">
+<div class="whatsapp-box">
+  <a href="https://whatsapp.com/channel/0029Vb7HLX0HwXb3q006Ot3l" target="_blank">
+    TAP TO JOIN WHATSAPP CHANNEL
+  </a>
+</div>
 
-    <div class="subject-box">
-      <div class="subject-title">1st LIVE</div>
-      <div class="countdown" id="count1">Loading...</div>
-         <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJXakZRTlRWTlZIUTFZbnBDYVNzd2VsaFBRMGxGTmt4eFJVVlBNRVpRTlhwd09FbGtNbXBuVjJKSFFUMD0iLCJuYW1lIjoiVHJpZ29ub21ldHJ5JTIwMDIlMjAlM0ElMjBUcmlnb25vbWV0cmljJTIwSWRlbnRpdGllcyIsImltYWdlIjoiaHR0cHMlM0ElMkYlMkZzdHVkeXN0YXJrLmluJTJGdGVtcG9yYXJ5LXNoaWZ0ZWQlMkZpbWFnZXMlMkZsaXZlLXBvc3Rlci5wbmcifQ.4XBDiPAc7bvkFP_RdWSJDr8znu63hTay02ADo16Kizc" class="pdf-link">Click To Join</a>
+<div class="subject-container">
+
+  <div class="subject-box">
+    <div class="subject-title">1st LIVE</div>
+    <div class="countdown" id="count1">Loading...</div>
+      <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJXakZRTlRWTlZIUTFZbnBDYVNzd2VsaFBRMGxGTmt4eFJVVlBNRVpRTlhwd09FbGtNbXBuVjJKSFFUMD0iLCJuYW1lIjoiVHJpZ29ub21ldHJ5JTIwMDIlMjAlM0ElMjBUcmlnb25vbWV0cmljJTIwSWRlbnRpdGllcyIsImltYWdlIjoiaHR0cHMlM0ElMkYlMkZzdHVkeXN0YXJrLmluJTJGdGVtcG9yYXJ5LXNoaWZ0ZWQlMkZpbWFnZXMlMkZsaXZlLXBvc3Rlci5wbmcifQ.4XBDiPAc7bvkFP_RdWSJDr8znu63hTay02ADo16Kizc" class="pdf-link">Click To Join</a>
     </div>
 
-    <div class="subject-box">
-      <div class="subject-title">2nd LIVE</div>
-      <div class="countdown" id="count2">Loading...</div>
-       <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJTMEpWV1RCcGNrTnVRbVF4V0Vod1UzTlNObVUxVVRsM2JsZGlUVVpEZGxGVGRIUTVOalo2YlRGa1NUMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHklMjAwNCUyMCUzQSUyMEhlYXRpbmclMjBFZmZlY3RzJTIwJTI2JTIwUG93ZXIlMjAlN0MlN0MlMjBESEElMjBhbmQlMjBRdWl6JTIwd2lsbCUyMGJlJTIwcHJvdmlkZWQlMjBzb29uIiwiaW1hZ2UiOiJodHRwcyUzQSUyRiUyRnN0dWR5c3RhcmsuaW4lMkZ0ZW1wb3Jhcnktc2hpZnRlZCUyRmltYWdlcyUyRmxpdmUtcG9zdGVyLnBuZyJ9.IQu5BTI96CBlr1bVFCTvpc3nxVVm3J08OTDufmwCa_k" class="pdf-link">Click To Join</a>
+  <div class="subject-box">
+    <div class="subject-title">2nd LIVE</div>
+    <div class="countdown" id="count2">Loading...</div>
+    <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJTMEpWV1RCcGNrTnVRbVF4V0Vod1UzTlNObVUxVVRsM2JsZGlUVVpEZGxGVGRIUTVOalo2YlRGa1NUMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHklMjAwNCUyMCUzQSUyMEhlYXRpbmclMjBFZmZlY3RzJTIwJTI2JTIwUG93ZXIlMjAlN0MlN0MlMjBESEElMjBhbmQlMjBRdWl6JTIwd2lsbCUyMGJlJTIwcHJvdmlkZWQlMjBzb29uIiwiaW1hZ2UiOiJodHRwcyUzQSUyRiUyRnN0dWR5c3RhcmsuaW4lMkZ0ZW1wb3Jhcnktc2hpZnRlZCUyRmltYWdlcyUyRmxpdmUtcG9zdGVyLnBuZyJ9.IQu5BTI96CBlr1bVFCTvpc3nxVVm3J08OTDufmwCa_k" class="pdf-link">Click To Join</a>
     </div>
 
-    <div class="subject-box">
-      <div class="subject-title">PROJECT 45 BATCH</div>
-       <a href="https://temproray.studystark.in/#batch_details/67be1ea9e92878bc16923fe8" class="pdf-link">Click To Access Batch</a>
+
+  <div class="subject-box">
+    <div class="subject-title">PROJECT 45 BATCH</div>
+     <a href="https://temproray.studystark.in/#batch_details/67be1ea9e92878bc16923fe8" class="pdf-link">Click To Access Batch</a>
     </div>
 
-  </div>
+</div>
 
-  <a href="index.html" class="back-home">⬅ Back to Home</a>
+<a href="index.html" class="back-home">⬅ Back to Home</a>
+<div class="footer">@PRIYANSHU</div>
 
-  <div class="footer">@PRIYANSHU</div>
 
-  <!-- Auto Voice Welcome -->
-  <script>
-    window.onload = function () {
-      const msg = new SpeechSynthesisUtterance("Your's welcome in project 45");
-      msg.rate = 1;
-      msg.pitch = 1;
-      msg.volume = 1;
-      speechSynthesis.speak(msg);
-    };
-  </script>
+<!-- Auto Voice Welcome -->
+<script>
+  window.onload = function () {
+    const msg = new SpeechSynthesisUtterance("Your's welcome in project 45");
+    msg.rate = 1;
+    msg.pitch = 1;
+    msg.volume = 1;
+    speechSynthesis.speak(msg);
+  };
+</script>
 
-  <script>
-    // Countdown function
-    function startCountdown(targetTime, elementId) {
-      setInterval(function () {
-        let now = new Date();
-        let target = new Date();
+<!-- UPDATED COUNTDOWN SCRIPT -->
+<script>
 
-        let [hours, minutes] = targetTime.split(":");
-        target.setHours(hours, minutes, 0, 0);
+function startCountdown(targetTime, resetTime, elementId) {
+  setInterval(function () {
 
-        if (now > target) {
-          document.getElementById(elementId).innerHTML = "LIVE NOW";
-          return;
-        }
+    let now = new Date();
+    let target = new Date();
+    let reset = new Date();
 
-        let diff = target - now;
+    let [th, tm] = targetTime.split(":");
+    let [rh, rm] = resetTime.split(":");
 
-        let hrs = Math.floor(diff / (1000 * 60 * 60));
-        let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        let secs = Math.floor((diff % (1000 * 60)) / 1000);
+    target.setHours(th, tm, 0, 0);
+    reset.setHours(rh, rm, 0, 0);
 
-        document.getElementById(elementId).innerHTML =
-          hrs + "h " + mins + "m " + secs + "s";
-      }, 1000);
+    // Reset to next day if time passed reset time
+    if (now > reset) {
+      target.setDate(target.getDate() + 1);
     }
 
-    startCountdown("17:00", "count1");
-    startCountdown("19:00", "count2");
-
-    /* ==================
-       Copy Link + Popup
-       ================== */
-    function copySiteLink() {
-      const link = "https://svmclass10thf.github.io/svmclass10thf/";
-      navigator.clipboard.writeText(link).then(() => {
-
-        let popup = document.createElement("div");
-        popup.className = "popup-message";
-        popup.innerText = "Link copied!! Paste it in any browser";
-
-        document.body.appendChild(popup);
-        popup.style.display = "block";
-
-        setTimeout(() => {
-          popup.style.animation = "fadeOut 0.4s ease forwards";
-        }, 1600);
-
-        setTimeout(() => {
-          popup.remove();
-        }, 2000);
-      });
+    // If time reached
+    if (now > target && now < reset) {
+      document.getElementById(elementId).innerHTML = "LIVE NOW";
+      return;
     }
-  </script>
+
+    let diff = target - now;
+
+    let hrs = Math.floor(diff / (1000 * 60 * 60));
+    let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    let secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById(elementId).innerHTML =
+      hrs + "h " + mins + "m " + secs + "s";
+
+  }, 1000);
+}
+
+// LIVE 1 → 5 PM, RESET → 6:50 PM
+startCountdown("17:00", "18:50", "count1");
+
+// LIVE 2 → 7 PM, RESET → 8:50 PM
+startCountdown("19:00", "20:50", "count2");
+
+
+
+function copySiteLink() {
+  const link = "https://svmclass10thf.github.io/svmclass10thf/";
+  navigator.clipboard.writeText(link).then(() => {
+
+    let popup = document.createElement("div");
+    popup.className = "popup-message";
+    popup.innerText = "Link copied!! Paste it in any browser";
+
+    document.body.appendChild(popup);
+    popup.style.display = "block";
+
+    setTimeout(() => {
+      popup.style.animation = "fadeOut 0.4s ease forwards";
+    }, 1600);
+
+    setTimeout(() => {
+      popup.remove();
+    }, 2000);
+  });
+}
+
+</script>
 
 </body>
 </html>
