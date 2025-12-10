@@ -214,17 +214,25 @@
       <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJXakZRTlRWTlZIUTFZbnBDYVNzd2VsaFBRMGxGTmt4eFJVVlBNRVpRTlhwd09FbGtNbXBuVjJKSFFUMD0iLCJuYW1lIjoiVHJpZ29ub21ldHJ5JTIwMDIlMjAlM0ElMjBUcmlnb25vbWV0cmljJTIwSWRlbnRpdGllcyIsImltYWdlIjoiaHR0cHMlM0ElMkYlMkZzdHVkeXN0YXJrLmluJTJGdGVtcG9yYXJ5LXNoaWZ0ZWQlMkZpbWFnZXMlMkZsaXZlLXBvc3Rlci5wbmcifQ.4XBDiPAc7bvkFP_RdWSJDr8znu63hTay02ADo16Kizc" class="pdf-link">Click To Join</a>
     </div>
 
+
   <div class="subject-box">
     <div class="subject-title">2nd LIVE</div>
     <div class="countdown" id="count2">Loading...</div>
-    <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJTMEpWV1RCcGNrTnVRbVF4V0Vod1UzTlNObVUxVVRsM2JsZGlUVVpEZGxGVGRIUTVOalo2YlRGa1NUMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHklMjAwNCUyMCUzQSUyMEhlYXRpbmclMjBFZmZlY3RzJTIwJTI2JTIwUG93ZXIlMjAlN0MlN0MlMjBESEElMjBhbmQlMjBRdWl6JTIwd2lsbCUyMGJlJTIwcHJvdmlkZWQlMjBzb29uIiwiaW1hZ2UiOiJodHRwcyUzQSUyRiUyRnN0dWR5c3RhcmsuaW4lMkZ0ZW1wb3Jhcnktc2hpZnRlZCUyRmltYWdlcyUyRmxpdmUtcG9zdGVyLnBuZyJ9.IQu5BTI96CBlr1bVFCTvpc3nxVVm3J08OTDufmwCa_k" class="pdf-link">Click To Join</a>
+     <a href="https://temproray.studystark.in/play/live_player.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJTMEpWV1RCcGNrTnVRbVF4V0Vod1UzTlNObVUxVVRsM2JsZGlUVVpEZGxGVGRIUTVOalo2YlRGa1NUMD0iLCJuYW1lIjoiRWxlY3RyaWNpdHklMjAwNCUyMCUzQSUyMEhlYXRpbmclMjBFZmZlY3RzJTIwJTI2JTIwUG93ZXIlMjAlN0MlN0MlMjBESEElMjBhbmQlMjBRdWl6JTIwd2lsbCUyMGJlJTIwcHJvdmlkZWQlMjBzb29uIiwiaW1hZ2UiOiJodHRwcyUzQSUyRiUyRnN0dWR5c3RhcmsuaW4lMkZ0ZW1wb3Jhcnktc2hpZnRlZCUyRmltYWdlcyUyRmxpdmUtcG9zdGVyLnBuZyJ9.IQu5BTI96CBlr1bVFCTvpc3nxVVm3J08OTDufmwCa_k" class="pdf-link">Click To Join</a>
     </div>
-
 
   <div class="subject-box">
     <div class="subject-title">PROJECT 45 BATCH</div>
      <a href="https://temproray.studystark.in/#batch_details/67be1ea9e92878bc16923fe8" class="pdf-link">Click To Access Batch</a>
     </div>
+
+  <!-- NEW BUTTON ADDED HERE -->
+  <div class="subject-box">
+    <div class="subject-title">RECORDED LECTURES</div>
+    <a href="recorded.html" class="pdf-link">
+      Click To Watch
+    </a>
+  </div>
 
 </div>
 
@@ -243,9 +251,7 @@
   };
 </script>
 
-<!-- UPDATED COUNTDOWN SCRIPT -->
 <script>
-
 function startCountdown(targetTime, resetTime, elementId) {
   setInterval(function () {
 
@@ -259,12 +265,10 @@ function startCountdown(targetTime, resetTime, elementId) {
     target.setHours(th, tm, 0, 0);
     reset.setHours(rh, rm, 0, 0);
 
-    // Reset to next day if time passed reset time
     if (now > reset) {
       target.setDate(target.getDate() + 1);
     }
 
-    // If time reached
     if (now > target && now < reset) {
       document.getElementById(elementId).innerHTML = "LIVE NOW";
       return;
@@ -282,13 +286,8 @@ function startCountdown(targetTime, resetTime, elementId) {
   }, 1000);
 }
 
-// LIVE 1 → 5 PM, RESET → 6:50 PM
 startCountdown("17:00", "18:50", "count1");
-
-// LIVE 2 → 7 PM, RESET → 8:50 PM
 startCountdown("19:00", "20:50", "count2");
-
-
 
 function copySiteLink() {
   const link = "https://svmclass10thf.github.io/svmclass10thf/";
