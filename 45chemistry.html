@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PROJECT 45 - CHEMISTRY</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #ff3b3b;
+      letter-spacing: 1px;
+      text-shadow: 0px 0px 8px #ff3b3b;
+    }
+
+    .chapter-box {
+      background: #1a1a1a;
+      border: 2px solid #ff3b3b;
+      padding: 18px;
+      margin: 18px auto;
+      width: 95%;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .chapter-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 16px rgba(255, 0, 0, 0.7);
+    }
+
+    .chapter-title {
+      font-size: 1.4rem;
+      color: #ff3b3b;
+      font-weight: 600;
+      text-shadow: 0px 0px 6px #ff3b3b;
+      margin-bottom: 5px;
+    }
+
+    .lectures {
+      margin-top: 12px;
+      display: none;
+      animation: fade 0.4s;
+    }
+
+    @keyframes fade {
+      from {opacity: 0; transform: translateY(-6px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .lec-btn {
+      display: block;
+      width: 92%;
+      margin: 10px auto;
+      padding: 12px;
+      background: linear-gradient(90deg, #ff1a1a, #b30000);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 14px;
+      text-decoration: none;
+      border: 2px solid #ff3b3b;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.45);
+      transition: 0.23s ease-in-out;
+    }
+
+    .lec-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #ff0000, #800000);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.75);
+    }
+
+    .back-home {
+      display: block;
+      width: 200px;
+      margin: 25px auto 10px;
+      text-align: center;
+      background: #ff3b3b;
+      color: white;
+      text-decoration: none;
+      padding: 12px 0;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+      transition: 0.3s;
+    }
+
+    .back-home:hover {
+      background: #ff0000;
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(255, 0, 0, 0.8);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #ff3b3b;
+      text-shadow: 0 0 8px #ff3b3b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>PROJECT 45 <br> CHEMISTRY</h1>
+
+<!-- CHEMICAL RACTION AND EQUATION -->
+<div class="chapter-box" onclick="toggleLectures('triangle')">
+  <div class="chapter-title">⚗️ Chemical Reaction and Equation</div>
+
+  <div id="triangle" class="lectures">
+
+    <!-- STOPPING TOGGLE ON CLICK -->
+    <a class="lec-btn" href="https://temproray.studystark.in/play/play.php?batch_id=67be1ea9e92878bc16923fe8&video_data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2aWRlb19rZXkiOiJRelJSWW5wdVdXdEpWV2N5ZERBd1JXOHJORnB1WkN0YWRFNHdaMlJJU2tKcGFsZHNVMFp3Y0RkT2R6MD0iLCJuYW1lIjoiQ2hlbWljYWwgUmVhY3Rpb25zIGFuZCBFcXVhdGlvbnMgMDEgOiBJbnRyb2R1Y3Rpb24gfHwgQ2hhcmFjdGVyaXN0aWNzIG9mIENoZW1pY2FsIFJlYWN0aW9uIHx8IEJhbGFuY2luZyBvZiBDaGVtaWNhbCBFcXVhdGlvbiIsImltYWdlIjoiIn0.EGcbuAP-JYHX3Mt2vDRCJVdaluGZ8Vv1TpLToRpxcwE&loaded=1" onclick="event.stopPropagation()">Lecture 1</a>
+  </div>
+
+</div>
+
+<a href="recorded.html" class="back-home">⬅ Back to Subjects</a>
+
+<div class="footer">@PRIYANSHU</div>
+
+<script>
+  function toggleLectures(id) {
+    let box = document.getElementById(id);
+    box.style.display = (box.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
