@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NCERT EXEMPLAR | Class 10</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#040404;
+  color:#ffffff;
+  overflow-x:hidden;
+}
+
+/* ========== PARTICLES BACKGROUND ========== */
+#particles-js{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+/* ========== HEADER ========== */
+.animated-header{
+  text-align:center;
+  padding:40px 15px 35px;
+  animation:slideDown 1.2s ease;
+}
+
+.animated-header h1{
+  margin:0;
+  font-size:36px;
+  letter-spacing:3px;
+  color:#4fc3f7;
+  text-shadow:
+    0 0 10px rgba(79,195,247,0.8),
+    0 0 35px rgba(79,195,247,0.6);
+  animation:glowPulse 3s infinite alternate;
+}
+
+.underline{
+  width:140px;
+  height:4px;
+  margin:14px auto 0;
+  border-radius:50px;
+  background:linear-gradient(90deg,#4fc3f7,#ffffff,#4fc3f7);
+  background-size:200% 100%;
+  box-shadow:0 0 25px rgba(79,195,247,0.8);
+  animation:underlineMove 2.5s linear infinite;
+}
+
+/* ========== CONTAINER ========== */
+.container{
+  max-width:950px;
+  margin:auto;
+  padding:15px;
+}
+
+/* ========== CHAPTER BUTTON ========== */
+.chapter-btn{
+  width:100%;
+  padding:18px;
+  margin-bottom:16px;
+  background:#0b0b0b;
+  border:2px solid rgba(79,195,247,0.7);
+  border-radius:16px;
+  color:#ffffff;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:
+    0 0 20px rgba(79,195,247,0.35),
+    inset 0 0 15px rgba(79,195,247,0.15);
+  transition:0.35s;
+}
+
+.chapter-btn:hover{
+  background:#07131b;
+  transform:scale(1.03);
+  box-shadow:
+    0 0 45px rgba(79,195,247,0.9),
+    inset 0 0 20px rgba(79,195,247,0.25);
+}
+
+/* ========== VIDEO BOX ========== */
+.video-box{
+  display:none;
+  margin-bottom:30px;
+  background:#000;
+  border-radius:18px;
+  overflow:hidden;
+  border:2px solid rgba(79,195,247,0.6);
+  box-shadow:0 0 40px rgba(79,195,247,0.6);
+}
+
+.video-box.active{
+  animation:videoGlow 2s infinite alternate;
+}
+
+.video-wrapper{
+  position:relative;
+  padding-top:56.25%;
+}
+
+.video-wrapper iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+/* ========== BACK BUTTON ========== */
+.back-btn{
+  display:block;
+  margin:40px auto 20px;
+  padding:14px 28px;
+  border-radius:50px;
+  background:#0b0b0b;
+  border:2px solid #4fc3f7;
+  color:#4fc3f7;
+  font-size:15px;
+  text-decoration:none;
+  text-align:center;
+  width:max-content;
+  box-shadow:0 0 25px rgba(79,195,247,0.6);
+  transition:0.3s;
+}
+
+.back-btn:hover{
+  background:#4fc3f7;
+  color:#000;
+  box-shadow:0 0 45px rgba(79,195,247,1);
+}
+
+/* ========== FOOTER ========== */
+footer{
+  text-align:center;
+  padding:25px 10px 15px;
+  font-size:13px;
+  color:#aaa;
+}
+
+footer a{
+  color:#4fc3f7;
+  text-decoration:none;
+  text-shadow:0 0 10px rgba(79,195,247,0.8);
+}
+
+/* ========== CREDITS ========== */
+.credit{
+  text-align:center;
+  font-size:12px;
+  color:#666;
+  padding-bottom:15px;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes glowPulse{
+  from{ text-shadow:0 0 10px rgba(79,195,247,0.6); }
+  to{ text-shadow:0 0 30px rgba(79,195,247,1); }
+}
+
+@keyframes slideDown{
+  from{opacity:0; transform:translateY(-30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes underlineMove{
+  from{background-position:0%;}
+  to{background-position:200%;}
+}
+
+@keyframes videoGlow{
+  from{box-shadow:0 0 30px rgba(79,195,247,0.5);}
+  to{box-shadow:0 0 70px rgba(79,195,247,1);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PARTICLES -->
+<div id="particles-js"></div>
+
+<!-- HEADER -->
+<header class="animated-header">
+  <h1>NCERT EXEMPLAR</h1>
+  <div class="underline"></div>
+</header>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <button class="chapter-btn" onclick="openVideo('ch1')">📘 Chapter 1 – Real Numbers</button>
+  <div class="video-box" id="ch1">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/Q838527A4q0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <button class="chapter-btn" onclick="openVideo('ch2')">📗 Chapter 2 – Polynomials</button>
+  <div class="video-box" id="ch2">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/VZc5oTX24Og" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <button class="chapter-btn" onclick="openVideo('ch3')">📙 Chapter 3 – Linear Equations</button>
+  <div class="video-box" id="ch3">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/BBLJAFu6QTs
+" allowfullscreen></iframe>
+    </div>
+  </div>
+
+ <button class="chapter-btn" onclick="openVideo('ch4')">📘 Chapter 4  – Quadratic Equation</button>
+  <div class="video-box" id="ch4">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/TDrmlO3MFEs
+" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  
+  <button class="chapter-btn" onclick="openVideo('ch5')">📗 Chapter 5 – Arithmatic Progression</button>
+  <div class="video-box" id="ch5">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/S3uMEXFPGyQ" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <button class="chapter-btn" onclick="openVideo('ch6')">📘 Chapter 6 – Triangles</button>
+  <div class="video-box" id="ch6">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/61w2pxtnA2M
+" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <button class="chapter-btn" onclick="openVideo('ch7')">📙 Chapter 7 – Coordinate Geometry</button>
+  <div class="video-box" id="ch7">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/z_Q5DDbtDTg
+" allowfullscreen></iframe>
+    </div>
+  </div>
+
+ <button class="chapter-btn" onclick="openVideo('ch8')">📘 Chapter 8  – Trigonometry</button>
+  <div class="video-box" id="ch8">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/zmbuhaX7mEY" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+    <button class="chapter-btn" onclick="openVideo('ch9')">📗 Chapter 9 – Applications of Trigonometry</button>
+  <div class="video-box" id="ch9">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/eDZd7gbaTTE" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <button class="chapter-btn" onclick="openVideo('ch10')">📘 Chapter 10 – Circles</button>
+  <div class="video-box" id="ch10">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/4u_KpkCbOKo
+" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <button class="chapter-btn" onclick="openVideo('ch11')">📙 Chapter 11 – Area Related To Circles</button>
+  <div class="video-box" id="ch11">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/Uv0hr6wK-Hg
+" allowfullscreen></iframe>
+    </div>
+  </div>
+
+ <button class="chapter-btn" onclick="openVideo('ch12')">📘 Chapter 12  –  Surface area and volume</button>
+  <div class="video-box" id="ch12">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/K7kMvJK1gq0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  <button class="chapter-btn" onclick="openVideo('ch13')">📙 Chapter 13 – Statistics</button>
+  <div class="video-box" id="ch13">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/NzEIHhbKV14
+" allowfullscreen></iframe>
+    </div>
+  </div>
+
+ <button class="chapter-btn" onclick="openVideo('ch14')">📘 Chapter 14  –  Probability</button>
+  <div class="video-box" id="ch14">
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/LM23NsP78I4" allowfullscreen></iframe>
+    </div>
+  </div>
+  <!-- BACK TO HOME -->
+  <a href="index.html" class="back-btn">⬅ Back to Home</a>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © Credit to 
+  <a href="https://www.youtube.com/@GYAANIKEEDASD" target="_blank">
+    GYAANI KEEDA
+  </a>
+</footer>
+
+<div class="credit">@priyanshu singh</div>
+
+<!-- PARTICLES JS -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js",{
+  particles:{
+    number:{value:60},
+    color:{value:"#4fc3f7"},
+    size:{value:3},
+    opacity:{value:0.6},
+    move:{speed:1.5}
+  }
+});
+
+function openVideo(id){
+  document.querySelectorAll('.video-box').forEach(box=>{
+    if(box.id===id){
+      box.style.display = box.style.display==="block"?"none":"block";
+      box.classList.toggle("active");
+      box.scrollIntoView({behavior:"smooth",block:"center"});
+    }else{
+      box.style.display="none";
+      box.classList.remove("active");
+    }
+  });
+}
+</script>
+
+</body>
+</html>
