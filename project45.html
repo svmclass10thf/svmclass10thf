@@ -15,10 +15,43 @@
       font-family: "Poppins", sans-serif;
     }
 
+    /* 🔔 TOP NOTICE BAR */
+    .notice-bar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px 10px;
+      background: linear-gradient(90deg,#ff3b3b,#ff0000);
+      color: white;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      z-index: 99999;
+      box-shadow: 0 4px 20px rgba(255,0,0,0.6);
+      animation: slideDown 0.8s ease;
+    }
+
+    .notice-bar a{
+      color: #fff700;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .notice-bar a:hover{
+      text-decoration: underline;
+    }
+
+    @keyframes slideDown{
+      from{ transform: translateY(-100%); }
+      to{ transform: translateY(0); }
+    }
+
     body {
       background: #0d0d0d;
       color: #fff;
       padding: 20px;
+      padding-top: 75px; /* notice bar ke liye */
     }
 
     h1 {
@@ -192,6 +225,12 @@
 
 <body>
 
+<!-- 🔔 NOTICE BAR -->
+<div class="notice-bar">
+  📢 Join our Telegram Channel :
+  <a href="https://t.me/SVMWEB" target="_blank">Click Here</a>
+</div>
+
 <h1>PROJECT 45 <br> LIVE CLASSES</h1>
 
 <div class="notice-box" onclick="copySiteLink()">
@@ -202,25 +241,25 @@
 
 <div class="subject-container">
 
-   <!-- NEW BUTTON ADDED HERE -->
   <div class="subject-box">
     <div class="subject-title">RECORDED LECTURES</div>
-    <a href="recorded.html" class="pdf-link">
-      Click To Watch
-    </a>
+    <a href="recorded.html" class="pdf-link">Click To Watch</a>
   </div>
-  
+
   <div class="subject-box">
     <div class="subject-title">PROJECT 45 BATCH</div>
-     <a href="https://temproray.studystark.in/#batch_details/67be1ea9e92878bc16923fe8" class="pdf-link">Click To Access Batch <br> (1st server)</a>
-     <a href="https://pw.rolexcoderz.live/project-45/" class="pdf-link">Click To Access Batch <br> (2nd server,better than 1)</a>
-    </div>
-   
+    <a href="https://temproray.studystark.in/#batch_details/67be1ea9e92878bc16923fe8" class="pdf-link">
+      Click To Access Batch <br> (1st server)
+    </a>
+    <a href="https://pw.rolexcoderz.live/project-45/" class="pdf-link">
+      Click To Access Batch <br> (2nd server, better than 1)
+    </a>
+  </div>
+
 </div>
 
 <a href="index.html" class="back-home">⬅ Back to Home</a>
 <div class="footer">@PRIYANSHU</div>
-
 
 <!-- Auto Voice Welcome -->
 <script>
@@ -291,7 +330,6 @@ function copySiteLink() {
     }, 2000);
   });
 }
-
 </script>
 
 </body>
