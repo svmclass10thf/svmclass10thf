@@ -12,6 +12,38 @@
       box-sizing: border-box;
     }
 
+    /* 🔔 TOP NOTICE BAR */
+    .notice-bar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px 10px;
+      background: linear-gradient(90deg,#00c6ff,#0072ff);
+      color: white;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      animation: slideDown 1s ease;
+    }
+
+    .notice-bar a{
+      color: #ffeb3b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .notice-bar a:hover{
+      text-decoration: underline;
+    }
+
+    @keyframes slideDown{
+      from{ transform: translateY(-100%); }
+      to{ transform: translateY(0); }
+    }
+
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       background: linear-gradient(270deg, #1d2671, #0f2027, #141e30);
@@ -19,6 +51,7 @@
       animation: gradientFlow 14s ease infinite;
       min-height: 100vh;
       padding: 20px;
+      padding-top: 75px; /* notice bar ke liye */
       color: white;
       display: flex;
       flex-direction: column;
@@ -78,6 +111,11 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    h2{
+      z-index:1;
+      margin-bottom:15px;
+    }
+
     /* Back to Home Button */
     .back-btn {
       margin-bottom: 25px;
@@ -135,7 +173,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Shine hover */
     .subjects button::after {
       content: "";
       position: absolute;
@@ -164,30 +201,32 @@
   </style>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RC9JQZP98Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RC9JQZP98Z');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC9JQZP98Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RC9JQZP98Z');
+  </script>
 </head>
 
 <body>
 
+  <!-- 🔔 NOTICE BAR -->
+  <div class="notice-bar">
+    📢 Join our Telegram Channel :
+    <a href="https://t.me/SVMWEB" target="_blank">Click Here</a>
+  </div>
+
   <h1>AARAMBH 2.0 2026</h1>
-<h2>SERVER 2</h2>
+  <h2>SERVER 2</h2>
+
   <div class="subjects">
     <button onclick="openPage('https://rolexcoderz.live/SST.php')">Social Science</button>
-
     <button onclick="openPage('https://rolexcoderz.live/science.php')">Science</button>
-
     <button onclick="openPage('https://rolexcoderz.live/10me.php')">Maths</button>
   </div>
-</div>
 
-  <!-- ⭐ Back To Home Button -->
   <div class="back-btn">
     <button onclick="openPage('AARAMBHMANAGEMENT.html')">⬅ Back</button>
   </div>
