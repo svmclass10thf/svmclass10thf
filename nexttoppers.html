@@ -12,11 +12,44 @@
       box-sizing: border-box;
     }
 
+    /* 🔔 TOP NOTICE BAR */
+    .notice-bar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px 10px;
+      background: linear-gradient(90deg,#00c6ff,#0072ff);
+      color: white;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      animation: slideDown 1s ease;
+    }
+
+    .notice-bar a{
+      color: #ffeb3b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .notice-bar a:hover{
+      text-decoration: underline;
+    }
+
+    @keyframes slideDown{
+      from{ transform: translateY(-100%); }
+      to{ transform: translateY(0); }
+    }
+
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       background: radial-gradient(circle at top, #1d2671, #0f2027);
       min-height: 100vh;
       padding: 20px;
+      padding-top: 70px; /* notice bar ke liye space */
       color: white;
       display: flex;
       flex-direction: column;
@@ -43,12 +76,17 @@
     }
 
     h1 {
-      margin: 30px 0 25px;
+      margin: 30px 0 10px;
       font-size: 30px;
       letter-spacing: 1px;
       text-align: center;
       z-index: 1;
       animation: fadeScale 1s ease forwards;
+    }
+
+    h2{
+      z-index:1;
+      margin-bottom:15px;
     }
 
     @keyframes fadeScale {
@@ -89,7 +127,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Hover gradient fill */
     .subjects button::before {
       content: "";
       position: absolute;
@@ -109,7 +146,6 @@
       box-shadow: 0 20px 45px rgba(0,0,0,0.6);
     }
 
-    /* Click ripple */
     .subjects button::after {
       content: "";
       position: absolute;
@@ -127,17 +163,10 @@
     }
 
     @keyframes ripple {
-      from {
-        transform: scale(0);
-        opacity: 0.8;
-      }
-      to {
-        transform: scale(4);
-        opacity: 0;
-      }
+      from { transform: scale(0); opacity: 0.8; }
+      to { transform: scale(4); opacity: 0; }
     }
 
-    /* Back button */
     .back-btn {
       margin: 25px 0;
       z-index: 1;
@@ -162,19 +191,26 @@
   </style>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RC9JQZP98Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RC9JQZP98Z');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC9JQZP98Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RC9JQZP98Z');
+  </script>
 </head>
 
 <body>
 
+  <!-- 🔔 NOTICE BAR -->
+  <div class="notice-bar">
+    📢 Join our Telegram Channel :
+    <a href="https://t.me/YOUR_TELEGRAM_CHANNEL" target="_blank">Click Here</a>
+  </div>
+
   <h1>AARAMBH 2.0 2026</h1>
-<h2>SERVER 1</h2>
+  <h2>SERVER 1</h2>
+
   <div class="subjects">
     <button onclick="openPage('geography.html')">Geography</button>
     <button onclick="openPage('economics.html')">Economics</button>
@@ -187,9 +223,7 @@
 
     <button onclick="openPage('maths.html')">Maths</button>
   </div>
-</div>
 
-  <!-- ⭐ Back To Home Button -->
   <div class="back-btn">
     <button onclick="openPage('AARAMBHMANAGEMENT.html')">⬅ Back</button>
   </div>
@@ -202,6 +236,3 @@
 
 </body>
 </html>
-
-
-
