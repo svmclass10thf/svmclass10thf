@@ -13,6 +13,43 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* TOP NOTICE BAR */
+.notice-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:12px 10px;
+  background:linear-gradient(90deg,#00c6ff,#0072ff);
+  color:white;
+  text-align:center;
+  font-size:16px;
+  font-weight:600;
+  z-index:999;
+  box-shadow:0 4px 20px rgba(0,0,0,0.6);
+  animation: slideDown 1s ease;
+}
+
+.notice-bar a{
+  color:#ffeb3b;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.notice-bar a:hover{
+  text-decoration:underline;
+}
+
+@keyframes slideDown{
+  from{
+    transform:translateY(-100%);
+  }
+  to{
+    transform:translateY(0);
+  }
+}
+
+/* body ko thoda niche shift */
 body{
   min-height:100vh;
   background: radial-gradient(circle at top, #0f2027, #000000);
@@ -22,6 +59,7 @@ body{
   justify-content:center;
   color:white;
   overflow:hidden;
+  padding-top:55px; /* notice bar ke liye space */
 }
 
 /* subtle animated background glow */
@@ -148,6 +186,12 @@ h1{
 </head>
 
 <body>
+
+<!-- TOP NOTICE BAR -->
+<div class="notice-bar">
+  📢 Join our Telegram Channel :
+  <a href="https://t.me/SVMWEB" target="_blank">Click Here</a>
+</div>
 
 <div class="container">
   <h1>AARAMBH 2.0 2026</h1>
