@@ -101,6 +101,30 @@ h1{
   background:linear-gradient(135deg,#ff512f,#dd2476);
 }
 
+/* BACK TO HOME BUTTON */
+.back-home{
+  position:absolute;
+  bottom:65px;
+  z-index:1;
+}
+
+.back-home button{
+  padding:12px 26px;
+  font-size:16px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  color:white;
+  background:linear-gradient(135deg,#43cea2,#185a9d);
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+  transition:0.3s;
+}
+
+.back-home button:hover{
+  transform:scale(1.08);
+  box-shadow:0 15px 40px rgba(0,0,0,0.8);
+}
+
 /* FOOTER TEXT */
 .footer{
   position:absolute;
@@ -135,6 +159,11 @@ h1{
   <button class="server-btn server-2" onclick="openServer('nexttoppers2.html')">
     SERVER-2 (Use if Server-1 is unavailable)
   </button>
+</div>
+
+<!-- Back to Home Button -->
+<div class="back-home">
+  <button onclick="openServer('index.html')">⬅ Back to Home</button>
 </div>
 
 <div class="footer">
