@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Public Doubts | SSSVM Class 10 F</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#eef2f5;
+}
+.box{
+  max-width:520px;
+  margin:30px auto;
+  background:#ffffff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+h2,h3{text-align:center}
+input,textarea,button{
+  width:100%;
+  padding:10px;
+  margin:6px 0;
+}
+button{
+  background:#007bff;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+}
+button:hover{background:#0056b3}
+.post{
+  background:#f1f1f1;
+  padding:10px;
+  border-radius:6px;
+  margin-top:10px;
+}
+small{color:gray}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>📢 Ask Your Doubt</h2>
+
+  <input id="name" placeholder="Your Name">
+  <textarea id="msg" placeholder="Write your doubt..."></textarea>
+  <button id="postBtn">Post</button>
+
+  <hr>
+  <h3>📬 All Doubts</h3>
+  <div id="posts"></div>
+</div>
+
+<!-- 🔥 FIREBASE + LOGIC -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+import { 
+  getFirestore, collection, addDoc, onSnapshot, deleteDoc, doc 
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
+
+/* 🔐 YOUR FIREBASE CONFIG */
+const firebaseConfig = {
+  apiKey: "AIzaSyC3Q4S1uFpQ6QkGYzHuaIz3UAB4qo9outs",
+  authDomain: "priyanshu-32365.firebaseapp.com",
+  projectId: "priyanshu-32365",
+  storageBucket: "priyanshu-32365.firebasestorage.app",
+  messagingSenderId: "911789563344",
+  appId: "1:911789563344:web:7323818d5517cad2f2add5"
+};
+
+/* INIT */
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+/* 🔑 DEVELOPER PASSWORD */
+const DEV_PASSWORD = "SSSVM@123";   // 🔥 CHANGE THIS
+
+/* ELEMENTS */
+const nameInput = document.getElementById("name");
+const msgInput  = document.getElementById("msg");
+const postBtn   = document.getElementById("postBtn");
+const postsDiv  = document.getElementById("posts");
+
+/* ADD POST */
+postBtn.addEventListener("click", async () => {
+  if(!nameInput.value || !msgInput.value){
+    alert("Please fill all fields");
+    return;
+  }
+
+  await addDoc(collection(db, "posts"), {
+    name: nameInput.value,
+    msg: msgInput.value,
+    time: Date.now()
+  });
+
+  msgInput.value="";
+});
+
+/* SHOW POSTS (LIVE) */
+onSnapshot(collection(db, "posts"), (snapshot)=>{
+  let html="";
+  snapshot.forEach((d)=>{
+    const p=d.data();
+    html+=`
+      <div class="post">
+        <b>${p.name}</b><br>
+        <small>${new Date(p.time).toLocaleString()}</small>
+        <p>${p.msg}</p>
+
+        <input type="password" id="p${d.id}" placeholder="Developer Password">
+        <button onclick="deletePost('${d.id}')">Delete</button>
+      </div>
+    `;
+  });
+  postsDiv.innerHTML=html;
+});
+
+/* DELETE POST (PASSWORD) */
+window.deletePost = async (id)=>{
+  const pass=document.getElementById("p"+id).value;
+  if(pass!==DEV_PASSWORD){
+    alert("Wrong Password ❌");
+    return;
+  }
+  await deleteDoc(doc(db,"posts",id));
+};
+</script>
+
+</body>
+    </html>
